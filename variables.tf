@@ -11,5 +11,18 @@ variable "aws_region" {
   description = "AWS Region"
 }
 
-variable "aws_ssh_admin_key_file {}
+variable "aws_ssh_admin_key_file" {}
+
+variable "ami" {
+	default = {
+		us-west-1 = "ami-4aa04129"
+		us-east-1 = ""
+		eu-west-1 = ""
+	}
+}
+
+variable "aws_instance_type" {
+	default = "t2.micro"
+}
+
 
